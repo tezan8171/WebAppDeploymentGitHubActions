@@ -30,7 +30,7 @@ jobs:
 
 
       - name: Push docker image
-        run: docker push ghcr.io/${{ github.repository }}/webpage:latest
+        run:  docker push ghcr.io/tezan8171/webappdeploymentgithubactions/webpage:latest
       - name: Run Docker container
         run: |
           docker run -d --name webpage-test -p 8080:80 ghcr.io/${{ github.repository }}/webpage:latest
