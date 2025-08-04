@@ -25,11 +25,11 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Docker image
+      - name: Build docker image
         run: docker build -t ghcr.io/tezan8171/webappdeploymentgithubactions/webpage:latest .
 
 
-      - name: Push Docker image
+      - name: Push docker image
         run: docker push ghcr.io/${{ github.repository }}/webpage:latest
       - name: Run Docker container
         run: |
